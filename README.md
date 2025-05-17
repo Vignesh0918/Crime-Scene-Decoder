@@ -1,52 +1,176 @@
-# 🕵️ AI Crime Scene Investigator - GPT-3.5 Turbo
-
-An interactive Streamlit app powered by OpenAI's GPT-3.5 and LangGraph to decode crime scene reports.  
-This tool simulates the investigative process — extracting clues, building timelines, identifying suspects, and deducing conclusions from user-provided crime reports.
+CRIME-SCENE-DECODER
 
 ---
 
-## 🚀 Features
+🕵️ AI Crime Scene Investigator (LangGraph + GPT-3.5)
 
-- 🔍 **Extracts Key Clues** from a crime scene report
-- 🕒 **Builds Event Timelines** using AI
-- 🧑‍💼 **Profiles Possible Suspects** based on clues and timeline
-- 🎯 **Provides Logical Conclusion** pointing to the likely guilty party
-- 🖥️ **Streamlit UI** for simple interaction
-- 🔗 **LangGraph workflow** ensures structured flow
+This is a Streamlit-based web app that uses LangGraph, LangChain, and OpenAI's GPT-3.5 Turbo to analyze crime scene reports and generate:
 
----
+Key clues
 
-## 🛠️ Tech Stack
+Detailed timelines
 
-| Technology    | Purpose                          |
-|---------------|----------------------------------|
-| **Python 3.8+**     | Programming Language              |
-| **Streamlit**       | Web UI for user interaction       |
-| **LangGraph**       | Orchestrating stateful workflows  |
-| **LangChain**       | Prompt templating and LLM access  |
-| **OpenAI API**      | GPT-3.5 for reasoning and outputs |
-| **dotenv**          | Secure API key management         |
+Suspect profiles
+
+Final conclusions
+
+
 
 ---
 
-## 🧪 How It Works
+Features
 
-The system follows a step-by-step reasoning process:
+LLM-powered step-by-step crime investigation
 
-1. **Clue Extraction** → From the input report  
-2. **Timeline Generation** → From extracted clues  
-3. **Suspect Profiling** → Based on clues & timeline  
-4. **Final Reasoning** → Based on all above stages
+Modular graph architecture using LangGraph
 
-Each step is handled by a node in a LangGraph-powered state machine.
+Interactive web UI with Streamlit
+
+Detects and visualizes:
+
+Key clues
+
+Event timeline
+
+Suspect profiles
+
+Logical conclusion
+
+
+
 
 ---
 
-## ⚙️ Installation & Setup
+How It Works
 
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/your-username/ai-crime-scene-investigator.git
-   cd ai-crime-scene-investigator
+1. User inputs a crime report into the app.
 
-Thank you...
+
+2. The system processes it in 4 LangGraph steps:
+
+Clue Extraction
+
+Timeline Building
+
+Suspect Profiling
+
+Final Reasoning
+
+
+
+3. Each step uses OpenAI GPT-3.5 Turbo to reason over the information.
+
+
+4. Output is displayed in a user-friendly format.
+
+
+
+
+---
+
+Tech Stack
+
+LangGraph
+
+LangChain
+
+OpenAI GPT-3.5 Turbo
+
+Streamlit
+
+Python 3.9+
+
+
+
+---
+
+Setup Instructions
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/ai-crime-investigator.git
+cd ai-crime-investigator
+
+2. Install Dependencies
+
+Use a virtual environment (recommended):
+
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+3. Set up Environment Variable
+
+Create a .env file in the project root with your OpenAI key:
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+4. Run the App
+
+streamlit run app.py
+
+
+---
+
+File Structure
+
+.
+├── app.py             # Main app file
+├── .env               # Contains your OpenAI API key
+├── requirements.txt   # Project dependencies
+└── README.md          # This documentation
+
+
+---
+
+Example Report
+
+A woman was found unconscious in her apartment. The front door was unlocked. Neighbors reported hearing shouting around 9 PM. Her phone was missing, and a broken vase was found near the sofa.
+
+Sample Output:
+
+Clues: Unlocked door, shouting at 9 PM, broken vase, missing phone
+
+Timeline: Events from 8:30 PM to 9:30 PM reconstructed
+
+Suspects: Neighbors, ex-partner, recent visitors
+
+Conclusion: Most likely suspect with justification
+
+
+
+---
+
+Screenshot
+
+(Insert a screenshot of the app running with sample input and output here)
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+Future Improvements
+
+PDF upload for crime reports
+
+Visualization of the timeline
+
+Integration with real-world case datasets
+
+
+
+---
+
+Let me know if you also want:
+
+requirements.txt
+
+GitHub badges
+
+Deployment instructions (Streamlit Cloud / Docker)
